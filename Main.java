@@ -1,28 +1,24 @@
-package lab7;
-class rectangle implements area
+package lab;
+class rectangle implements Ab
 {
-	public float calc(float x,float y)
-	{
-		return(x*y);
-	}
+	public float compute(float p,float q)
+	{return(p*q);}
 }
-class circle implements area
+class circle implements Ab
 {
-	public float calc(float x,float y)
-	{
-		return(float)(pi*x*x);
-	}
+	public float compute(float p,float q)
+	{return(pi*p*p);}
 }
-public class Main
+class Main
 {
 	public static void main(String args[])
 	{
 		rectangle rect=new rectangle();
 		circle cr=new circle();
-		area ar;
+		Ab ar;
 		ar=rect;
-		System.out.println("Area of the rectangle= "+ar.calc(20,40));
+		System.out.println("Area of the rectangle= "+ar.compute(100,20));
 		ar=cr;
-		System.out.println("Area of the circle= "+ar.calc(20,10));
+		System.out.println("Area of the circle= "+ar.compute(10,200));
 	}
 }

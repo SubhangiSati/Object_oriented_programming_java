@@ -1,5 +1,4 @@
-package lab7;
-
+package lab;
 public interface A {
 	default void meth1() {
 		
